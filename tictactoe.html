@@ -1,0 +1,141 @@
+<!DOCTYPE HTML>
+<!--
+	Editorial by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Austin's Project Website</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+
+							<!-- Header -->
+								<header id="header">
+									<a href="https://www.sfml-dev.org/" class="logo"><strong>SFML</strong></a>
+									<ul class="icons">
+										<li><a href="https://www.fiverr.com/archonite" class="icon brands fa-fonticons"><span class="label"></span></a></li>
+										<li><a href="https://github.com/AustinShutt" class="icon brands fa-github"><span class="label"></span></a></li>
+										<li><a href="https://www.linkedin.com/in/austin-shutt-8b0629120" class="icon brands fa-linkedin"><span class="label"></span></a></li>
+									</ul>
+								</header>
+
+							<!-- Content -->
+								<section>
+									<header class="main">
+										<h1>SFML Tic-Tac-Toe</h1>
+									</header>
+
+									<span class="main image"><img src="images/TicTacToe2.PNG" alt=""/>
+															
+														</span>
+
+														<p><br>This application is built using C++ and the SFML library.</p>
+														<p>The source code for this project is available on its public <a href="https://github.com/AustinShutt/SFML_TicTacToe">github repository.</a> <br>
+														
+									<hr class="major" />
+
+									<h2>Design Requirements</h2>
+									<p><strong>    Purpose:</strong> <br>
+										This was a project for a client on <a href="https://www.fiverr.com/archonite">my Fiverr page</a> that requested an SFML application that implemented the minimax
+										algorithm for the computer player. All the used assets were created by me in Aseprite. (Yes I know it's just X's and O's). 
+										<p><strong>    Requirements:</strong>
+										<ol>
+											<li>SFML staticly linked library for project.</li>
+											<li>Minimax algorithm usage for computer opponent.</li> 
+										</ol>
+									</p>	
+									<hr class="major" />
+
+									<h2>Main Game Loop</h2>
+									
+									<p>Below is a flowchart of the main game-loop of the entire application. This is a simple if inefficient approach where the menu state stays in the call stack
+									  of the game stack. But for such a small game this is an appropriate method to switch back to the main menu state when the user decides to exit the Tic-Tac-Toe
+									  game and return to the menu.
+									</p>
+										
+									<span class="main image"><img src="images/TicTacToe - Application Overview.jpg" alt="" style="max-height:1000px; max-width: max-content;"/></span>
+										
+									<h2>Game Logic</h2>
+									
+									<p>Below is a flowchart for all possible actions that can be taken while inside of the game state. The crux of the algorithm takes place in the decision
+										diamond with "CurrentPtr == Human Player?", if the instance is not a human player then the AI makes a move by overriding the virtual function inside
+										the player class. This allows for an easy flow of information through the application and a logic pattern that is easy to reason about while using OOP
+										design principles.
+									</p>
+										
+									<span class="main image"><img src="images/TicTacToe - Game Flowchart.jpg" alt="" style="max-height:1500px; max-width: max-content;"/></span>
+									
+									
+
+									<hr class="major" />
+
+									<h2>Example GIF</h2>
+									<span class="main image"><img src="images/Tic_Tac_Toe.gif" alt="" style="max-height:1000px; max-width: max-content;"/></span>
+									
+								</section>
+						</div>
+					</div>
+
+				<!-- Sidebar -->
+				<div id="sidebar">
+					<div class="inner">
+						<!-- Menu -->
+							<nav id="menu">
+								<header class="major">
+									<h2>Menu</h2>
+								</header>
+								<ul>
+									<li><a href="index.html">Homepage</a></li>
+									<li><a href="generic.html">About Me</a></li>
+									<li>
+										<span class="opener">PROJECTS</span>
+										<ul>
+											<li><a href="roxorgolf.html">RoxorGolf</a></li>
+											<li><a href="rouletteTracker.html">Roulette Application</a></li>
+											<li><a href="tictactoe.html">Tic-Tac-Toe</a></li>
+										</ul>
+									</li>
+								</ul>
+							</nav>
+						<!-- Section -->
+							<section>
+								<header class="major">
+									<h2>Get in touch</h2>
+								</header>
+								<p>Reach out to me at any time through my phone or email below:</p>
+								<ul class="contact">
+									<li class="icon solid fa-envelope">shutt.austin@gmail.com</a></li>
+									<li class="icon solid fa-phone">(260) 449-0759</li>
+									<li class="icon solid fa-home">	Fort Wayne, IN</li>
+								</ul>
+							</section>
+
+						<!-- Footer -->
+							<footer id="footer">
+								<p class="copyright">&copy; Untitled. All rights reserved.</p>
+							</footer>
+					</div>
+				</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
